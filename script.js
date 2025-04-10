@@ -19,14 +19,14 @@ let navItems = [
 
     {
         text: 'Photography', href: 'photography.html', dropdown: [
-            { text: '35mm Photography', href: 'photography.html#bw-photos' },
+            { text: '35mm Photography', href: 'photography.html' },
             { text: 'Digital Photography', href: 'photography.html#digital-photos' },
 
         ]
     },
     {
         text: 'Video', href: 'video.html', dropdown: [
-            { text: 'Singularity Synth', href: 'video.html#kemper' },
+            { text: 'Singularity Synth', href: 'video.html' },
             { text: 'Bounce Back from Burnout', href: 'video.html#bounce-back' },
             { text: 'How does sound work?', href: 'video.html#how-does-sound-work' },
             { text: 'Music\'s Elite Seat', href: 'video.html#elite-seat' },
@@ -36,7 +36,7 @@ let navItems = [
     },
     {
         text: 'Audio', href: 'audio.html', dropdown: [
-            { text: 'Synthesis', href: 'audio.html#synthesis' },
+            { text: 'Synthesis', href: 'audio.html' },
             { text: 'Recordings', href: 'audio.html#recordings' },
 
         ]
