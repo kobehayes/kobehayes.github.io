@@ -26,7 +26,17 @@
         width: 40px;
         height: 40px;
         background-color: #000000;
-        border: 1px solid white;
+        border: 10px solid white;
+    }
+
+    #mobile-navbar:hover #navbar {
+        visibility: visible;
+    }
+
+    #mobile-navbar:hover {
+        background-color: blue;
+        border: 10px solid red;
+
     }
 
 
