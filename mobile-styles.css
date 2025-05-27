@@ -1,6 +1,22 @@
 /* BOTH MOBILE AND TABLET */
 @media (max-width: 991px) {
 
+    /* ----------------------navbar labels */
+    .nav-item .dropdown {
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    .aux-carousels img {
+        margin: 0;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+/* ONLY MOBILE */
+@media (max-width: 767px) {
+
     #navbar {
         visibility: hidden;
         display: block;
@@ -16,27 +32,24 @@
         width: 100vw;
         background-color: black;
         border: 1px solid white;
+        transition: none;
     }
 
     #mobile-navbar {
+        z-index: 10;
         visibility: visible;
         position: fixed;
         top: 30px;
         left: 20px;
         width: 40px;
         height: 40px;
-        background-color: #000000;
+        background-color: black;
         border: 10px solid white;
     }
 
     #mobile-navbar:hover #navbar {
         visibility: visible;
-    }
-
-    #mobile-navbar:hover {
-        background-color: blue;
-        border: 10px solid red;
-
+        border: red;
     }
 
 
@@ -54,34 +67,12 @@
         font-size: 18px;
         display: flex;
         flex-direction: column;
+        visibility: hidden;
     }
 
     .dropdown a {
         padding: 10px;
     }
-
-    /* ----------------------navbar labels */
-    .nav-item .dropdown {
-
-        opacity: 1;
-
-        transition-delay: 0s;
-    }
-
-    .aux-carousels img {
-        margin: 0;
-
-        width: 100vw;
-        height: auto;
-    }
-
-
-
-}
-
-/* ONLY MOBILE */
-@media (max-width: 767px) {
-
 
     body {
         margin: 0;

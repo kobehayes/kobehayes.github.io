@@ -144,3 +144,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// document.addEventListener()
+
+function mobileMenuToggle() {
+
+    const menuButton = document.getElementById("mobile-navbar");
+    const mobileMenu = document.getElementById("navbar");
+    const mobileDropdown = document.getElementsByClassName("dropdown");
+    // menuButton.onclick = mobileMenu.style.visibility = "visible";
+
+    mobileMenu.style.visibility = "hidden";
+    mobileDropdown.style.backgroundColor = "red";
+    mobileDropdown.style.visibility = "hidden";
+
+    menuButton.addEventListener("click", () => {
+        if (document.getElementById("navbar").style.visibility == "hidden") {
+            mobileMenu.style.visibility = "visible";
+            mobileDropdown.style.visibility = "visible";
+
+        }
+        else {
+            mobileMenu.style.visibility = "hidden";
+            mobileDropdown.style.visibility = "hidden";
+        }
+
+    }
+    )
+
+}
+
+mobileMenuToggle();
+
+
