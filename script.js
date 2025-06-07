@@ -145,28 +145,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// document.addEventListener()
 
 function mobileMenuToggle() {
 
-    const menuButton = document.getElementById("mobile-navbar");
+    const menuButton = document.getElementById("mobile-navbar-button");
     const mobileMenu = document.getElementById("navbar");
     const mobileDropdown = document.getElementsByClassName("dropdown");
-    // menuButton.onclick = mobileMenu.style.visibility = "visible";
 
-    mobileMenu.style.visibility = "hidden";
-    mobileDropdown.style.backgroundColor = "red";
-    mobileDropdown.style.visibility = "hidden";
+    document.getElementById("navbar").style.visibility = "hidden";
+    for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+        document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+    }
 
+    // if navbar is hidden, menu button click makes dropdown elements and navbar visible , if navbar is not hidden, menu button click makes dropdown elements and navbar hidden
     menuButton.addEventListener("click", () => {
+
         if (document.getElementById("navbar").style.visibility == "hidden") {
-            mobileMenu.style.visibility = "visible";
-            mobileDropdown.style.visibility = "visible";
+
+            document.getElementById("navbar").style.visibility = "visible";
+            // dropdown must be a list because you cant set visibility for an entire class, must iterate
+            for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+                document.getElementsByClassName("dropdown")[x].style.visibility = "visible";
+            }
 
         }
         else {
-            mobileMenu.style.visibility = "hidden";
-            mobileDropdown.style.visibility = "hidden";
+            document.getElementById("navbar").style.visibility = "hidden";
+            for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+                document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+            }
         }
 
     }
