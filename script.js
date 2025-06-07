@@ -152,7 +152,15 @@ function mobileMenuToggle() {
     const mobileMenu = document.getElementById("navbar");
     const mobileDropdown = document.getElementsByClassName("dropdown");
 
-    document.getElementById("navbar").style.visibility = "hidden";
+
+    while (innerWidth <= 767) {
+        document.getElementById("navbar").style.visibility = "hidden";
+    }
+    while (innerWidth > 767) {
+        document.getElementById("navbar").style.visibility = "visible";
+    }
+
+
     for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
         document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
     }
