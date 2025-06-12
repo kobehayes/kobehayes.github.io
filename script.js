@@ -168,19 +168,19 @@ function mobileMenuToggle() {
     // if navbar is hidden, menu button click makes dropdown elements and navbar visible , if navbar is not hidden, menu button click makes dropdown elements and navbar hidden
     menuButton.addEventListener("click", () => {
 
-        if (document.getElementById("navbar").style.visibility == "hidden") {
+        if (document.getElementById("navbar").style.visibility == "visible") {
 
-            document.getElementById("navbar").style.visibility = "visible";
+            document.getElementById("navbar").style.visibility = "hidden";
             // dropdown must be a list because you cant set visibility for an entire class, must iterate
             for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
-                document.getElementsByClassName("dropdown")[x].style.visibility = "visible";
+                document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
             }
 
         }
         else {
-            document.getElementById("navbar").style.visibility = "hidden";
+            document.getElementById("navbar").style.visibility = "visible";
             for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
-                document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+                document.getElementsByClassName("dropdown")[x].style.visibility = "visible";
             }
         }
 
