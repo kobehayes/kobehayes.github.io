@@ -227,7 +227,7 @@ footer {
 footer {
   margin-top: 2em;
   display: flex;
-  position: relative;
+  position: absolute;
   /* bottom: 0;
   left: 0;
   right: 0; */
@@ -512,7 +512,12 @@ a:hover {
 }
 
 
-/* ------------------TIME BASED---------------- */
+/* ------------------VIDEO---------------- */
+
+#video-main {
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 #kemper {
   display: flex;
@@ -532,9 +537,7 @@ a:hover {
 }
 
 #kemper-main-photo {
-  width: 100vw;
-  height: auto;
-  object-fit: cover;
+  justify-content: center;
 }
 
 #kemper-photo-grid {
@@ -543,42 +546,48 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1.7vw;
+  /* margin-top: 1.7vw; */
   align-items: flex-start;
 }
 
+/* .kemper-vertical {
+  height: 30em;
+  width: auto;
+   margin: 2vw; 
+  object-fit: contain;
+} */
+
+#kemper-main-photo,
+.kemper-landscape,
 .kemper-vertical {
   height: 30em;
   width: auto;
-  margin: 2vw;
-  object-fit: contain;
-}
-
-.kemper-landscape {
-  height: 30em;
-  width: auto;
-  margin: 2vw;
+  /* margin: 2vw; */
   object-fit: contain;
 }
 
 /* ------------------MOTION---------- */
-.motion-graphics {
+/* .motion-graphics {
   height: 100vh;
-}
+} */
 
 /* #motion-subhead {
   font-size: 4em;
 } */
 
 .motion-graphics div {
-  padding: 30px;
+  /* padding: 30px; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-
-  min-height: 80vh;
   /* scroll-snap-align: start; */
   scroll-margin: 50px;
   border-bottom: 1px solid white;
+}
+
+#video-main video {
+  height: 50vw;
+  width: auto;
 }
 
 .motion-graphics .work-date {
@@ -592,12 +601,12 @@ a:hover {
 .motion-text {
   display: flex;
   flex-direction: column;
-  padding-right: 2em;
+  /* padding-right: 2em; */
   align-items: flex-start;
 }
 
 .motion-graphics .work-desc {
-  max-width: fit-content;
+  /* max-width: fit-content; */
   text-align: left;
 }
 
@@ -619,9 +628,11 @@ a:hover {
   object-fit: cover;
 }
 
-.photo-carousel-container {
-  margin-bottom: 20vh;
+.photography-section {
+  margin-top: 20vh;
+  margin-bottom: 10vh;
 }
+
 
 /* ------------------audio---------------------- */
 
