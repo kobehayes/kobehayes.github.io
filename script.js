@@ -153,12 +153,12 @@ function mobileMenuToggle() {
     const mobileDropdown = document.getElementsByClassName("dropdown");
 
 
-    while (innerWidth <= 767) {
-        document.getElementById("navbar").style.visibility = "hidden";
-    }
-    while (innerWidth > 767) {
-        document.getElementById("navbar").style.visibility = "visible";
-    }
+    // while (innerWidth <= 767) {
+    //     document.getElementById("navbar").style.visibility = "hidden";
+    // }
+    // while (innerWidth > 767) {
+    //     document.getElementById("navbar").style.visibility = "visible";
+    // }
 
 
     for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
@@ -186,8 +186,11 @@ function mobileMenuToggle() {
 
     }
     )
+    // trying to toggle menu when clicking dropdown elements
+    // mobileDropdown.addEventListener("click", document.getElementById("navbar").style.visibility = "hidden");
 
 }
+
 
 mobileMenuToggle();
 
