@@ -88,20 +88,20 @@ function generateNavBar() {
     }
 
     //---------resize images dynamically
-    window.addEventListener('resize', () => {
-        let img = document.querySelector('img');
-        img.width = window.innerWidth / 1.5; // half of the window's width
-        //   img.height = img.width * (img.naturalHeight / img.naturalWidth); // maintain aspect ratio
-    });
-}
+    //     window.addEventListener('resize', () => {
+    //         let img = document.querySelector('img');
+    //         img.width = window.innerWidth / 1.5; // half of the window's width
+    //         //   img.height = img.width * (img.naturalHeight / img.naturalWidth); // maintain aspect ratio
+    //     });
+    // }
 
 
-function generateFooter(name, contactInfo) {
-    // Create a new footer element
-    let footer = document.createElement('footer');
+    function generateFooter(name, contactInfo) {
+        // Create a new footer element
+        let footer = document.createElement('footer');
 
-    // Set the inner HTML of the footer
-    footer.innerHTML = `
+        // Set the inner HTML of the footer
+        footer.innerHTML = `
         <div class="footer-content">
 
             <p>kobehayes1@gmail.com</p>
@@ -111,87 +111,89 @@ function generateFooter(name, contactInfo) {
         </div>
     `;
 
-    document.body.appendChild(footer);
-}
-
-generateFooter();
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const hamburger = document.getElementById('hamburger');
-//     const menuItems = document.querySelector('.menu-items');
-
-//     hamburger.addEventListener('click', function () {
-//         menuItems.classList.toggle('active');
-//     });
-// });
-
-// apollo embed
-document.addEventListener('DOMContentLoaded', () => {
-    const embedButton = document.getElementById('apollo-embed-button');
-    const closeButton = document.getElementById('apollo-x-button');
-    const overlay = document.getElementById('apollo-embed-div');
-
-    if (embedButton && overlay) {
-        embedButton.addEventListener('click', function () {
-            overlay.style.display = 'flex';
-        });
+        document.body.appendChild(footer);
     }
 
-    if (closeButton && overlay) {
-        closeButton.addEventListener('click', function () {
-            overlay.style.display = 'none';
-        });
-    }
-});
 
 
-function mobileMenuToggle() {
 
-    const menuButton = document.getElementById("mobile-navbar-button");
-    const mobileMenu = document.getElementById("navbar");
-    const mobileDropdown = document.getElementsByClassName("dropdown");
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const hamburger = document.getElementById('hamburger');
+    //     const menuItems = document.querySelector('.menu-items');
+
+    //     hamburger.addEventListener('click', function () {
+    //         menuItems.classList.toggle('active');
+    //     });
+    // });
+
+    // apollo embed
+    document.addEventListener('DOMContentLoaded', () => {
+        const embedButton = document.getElementById('apollo-embed-button');
+        const closeButton = document.getElementById('apollo-x-button');
+        const overlay = document.getElementById('apollo-embed-div');
+
+        if (embedButton && overlay) {
+            embedButton.addEventListener('click', function () {
+                overlay.style.display = 'flex';
+            });
+        }
+
+        if (closeButton && overlay) {
+            closeButton.addEventListener('click', function () {
+                overlay.style.display = 'none';
+            });
+        }
+    });
 
 
-    // while (innerWidth <= 767) {
-    //     document.getElementById("navbar").style.visibility = "hidden";
-    // }
-    // while (innerWidth > 767) {
-    //     document.getElementById("navbar").style.visibility = "visible";
-    // }
+    function mobileMenuToggle() {
+
+        const menuButton = document.getElementById("mobile-navbar-button");
+        const mobileMenu = document.getElementById("navbar");
+        const mobileDropdown = document.getElementsByClassName("dropdown");
 
 
-    for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
-        document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
-    }
+        // while (innerWidth <= 767) {
+        //     document.getElementById("navbar").style.visibility = "hidden";
+        // }
+        // while (innerWidth > 767) {
+        //     document.getElementById("navbar").style.visibility = "visible";
+        // }
 
-    // if navbar is hidden, menu button click makes dropdown elements and navbar visible , if navbar is not hidden, menu button click makes dropdown elements and navbar hidden
-    menuButton.addEventListener("click", () => {
 
-        if (document.getElementById("navbar").style.visibility == "visible") {
+        for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+            document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+        }
 
-            document.getElementById("navbar").style.visibility = "hidden";
-            // dropdown must be a list because you cant set visibility for an entire class, must iterate
-            for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
-                document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+        // if navbar is hidden, menu button click makes dropdown elements and navbar visible , if navbar is not hidden, menu button click makes dropdown elements and navbar hidden
+        menuButton.addEventListener("click", () => {
+
+            if (document.getElementById("navbar").style.visibility == "visible") {
+
+                document.getElementById("navbar").style.visibility = "hidden";
+                // dropdown must be a list because you cant set visibility for an entire class, must iterate
+                for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+                    document.getElementsByClassName("dropdown")[x].style.visibility = "hidden";
+                }
+
+            }
+            else {
+                document.getElementById("navbar").style.visibility = "visible";
+                for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
+                    document.getElementsByClassName("dropdown")[x].style.visibility = "visible";
+                }
             }
 
         }
-        else {
-            document.getElementById("navbar").style.visibility = "visible";
-            for (var x = 0; x < document.getElementsByClassName("dropdown").length; x++) {
-                document.getElementsByClassName("dropdown")[x].style.visibility = "visible";
-            }
-        }
+        )
+        // trying to toggle menu when clicking dropdown elements
+        // mobileDropdown.addEventListener("click", document.getElementById("navbar").style.visibility = "hidden");
 
     }
-    )
-    // trying to toggle menu when clicking dropdown elements
-    // mobileDropdown.addEventListener("click", document.getElementById("navbar").style.visibility = "hidden");
 
+
+    mobileMenuToggle();
+
+    generateFooter();
 }
-
-
-mobileMenuToggle();
-
 

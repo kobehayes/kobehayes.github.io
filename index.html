@@ -12,12 +12,13 @@
 
   <style>
     body {
-      overflow: hidden;
-      height: 100vh;
+      /* overflow: hidden; */
+      height: 100%;
+      width: 100vw;
       background-image: url('book-imgs/anything-graphic.svg');
-      background-size: cover;
+      /* background-size: 100%; */
       background-position: 0px 30px;
-      background-repeat: repeat;
+      /* background-repeat: repeat; */
       animation: moveBackground 60s linear infinite;
 
     }
@@ -42,9 +43,8 @@
       font-size: 2.5rem;
     }
 
-
     footer {
-      position: absolute;
+      position: static;
     }
   </style>
 </head>
@@ -70,6 +70,16 @@
     </section>
   </section>
 
+  <footer>
+    <div class="footer-content">
+
+      <p>kobehayes1@gmail.com</p>
+      <p><a href="https://www.linkedin.com/in/kobehayes/">LinkedIn</a></p>
+
+      <p><a href="https://www.instagram.com/k.be?igsh=MXRud2prZTJ0a3FldQ%3D%3D&utm_source=qr">Instagram</a></p>
+    </div>
+  </footer>
+
 
 
   <script src="script.js"></script>
@@ -78,6 +88,7 @@
       window.location.href = 'graphic-design.html';
     });
     generateNavBar();
+
 
   </script>
 
