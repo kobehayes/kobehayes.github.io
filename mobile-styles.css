@@ -7,7 +7,7 @@
 
 
 /* BOTH MOBILE AND TABLET */
-@media (max-width: 991px) and (hover:none) {
+@media (max-width: 991px) {
 
     /* ----------------------navbar labels */
     .nav-item .dropdown {
@@ -115,89 +115,108 @@
         width: 100vw;
         height: auto;
 
-        transform: scale(1);
+        transform: scale(1.0);
         transform-origin: left;
     }
 
-    .work-info {
-        padding: 0 2px;
-        display: flex;
-        flex-direction: column;
-        width: 95vw;
+    #home-header {
+        transform: scale(1.3);
+        transform-origin: left;
     }
 
-    .work-title {
+    #home-main {
+        .bottom-nav-buttons-container {
+            display: flex;
+            flex-direction: column;
+        }
 
-        font-size: 2.5rem;
-
+        .bottom-nav-buttons {
+            position: relative;
+            font-size: 1.3rem;
+            width: fit-content;
+        }
     }
+}
 
-    .work-date {}
+.work-info {
+    padding: 0 2px;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+}
 
-    .work-desc {
-        max-width: 100%;
-        text-align: left;
-        font-size: 1rem;
-    }
+.work-title {
 
-    .graphic-works {
-        /* top right bottom left */
-        /* padding: 0 2vw 0 2vw; */
-        padding: 0;
-        margin: 0;
-    }
+    font-size: 2.5rem;
 
-    /* GRAPHIC DESIGN PAGE */
+}
 
-    #alt-img-container {
-        display: block;
-        margin: 0;
-        width: 100vw;
+.work-date {}
 
-    }
+.work-desc {
+    max-width: 100%;
+    text-align: left;
+    font-size: 1rem;
+}
 
-    #alt-1,
-    #alt-2 {
-        width: 100vw;
-        height: auto;
-        padding-bottom: 2px;
-        box-sizing: border-box;
-    }
+.graphic-works {
+    /* top right bottom left */
+    /* padding: 0 2vw 0 2vw; */
+    padding: 0;
+    margin: 0;
+}
+
+/* GRAPHIC DESIGN PAGE */
+
+#alt-img-container {
+    display: block;
+    margin: 0;
+    width: 100vw;
+
+}
+
+#alt-1,
+#alt-2 {
+    width: 100vw;
+    height: auto;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+}
 
 
-    /* bottom three works in gd page */
-    .graphic-design-img {
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
+/* bottom three works in gd page */
+.graphic-design-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
 
 
-    /*  PHOTOGRAPHY */
+/*  PHOTOGRAPHY */
 
-    #all-photos img {
-        border: 10px solid white;
-        width: 100vw;
-        height: auto;
-        margin: 0;
-        box-sizing: border-box;
-    }
+#all-photos img {
+    border: 10px solid white;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    /* VIDEO */
+/* VIDEO */
 
-    #video-main {
-        width: 100%;
-        overflow-x: hidden;
-        padding: 0;
-        margin: 0;
-    }
+#video-main {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
 
-    #video-main video {
-        width: 100%;
-        height: auto;
-    }
+#video-main video {
+    width: 100%;
+    height: auto;
+}
 
-    /* 
+/* 
     #video-main img,
     video {
         object-fit: contain;
@@ -206,19 +225,19 @@
     } */
 
 
-    #kemper {
+#kemper {
 
-        display: block;
-    }
+    display: block;
+}
 
-    #kemper .work-desc {
-        max-width: none;
-        text-align: left;
-        text-indent: 0;
-    }
+#kemper .work-desc {
+    max-width: none;
+    text-align: left;
+    text-indent: 0;
+}
 
 
-    /* #kemper-photo-grid img,
+/* #kemper-photo-grid img,
     .kemper-vertical,
     .kemper-landscape,
     #kemper-main-photo {
@@ -228,38 +247,38 @@
         padding: 0;
     } */
 
-    .motion-graphics div {
-        display: block;
-        padding: 0;
+.motion-graphics div {
+    display: block;
+    padding: 0;
+}
+
+.motion-text {
+    display: block;
+    padding: 0 10px;
+}
+
+/* audio */
+
+#audio-main {
+    width: 100vw;
+    overflow-x: hidden;
+
+
+    .section-title {
+        font-size: 3.7rem;
+        margin: 0;
+        word-wrap: normal;
     }
 
-    .motion-text {
-        display: block;
-        padding: 0 10px;
+    #silo .work-desc {
+        max-width: 100vw;
+        margin-bottom: 0;
     }
-
-    /* audio */
-
-    #audio-main {
-        width: 100vw;
-        overflow-x: hidden;
-
-
-        .section-title {
-            font-size: 3.7rem;
-            margin: 0;
-            word-wrap: normal;
-        }
-
-        #silo .work-desc {
-            max-width: 100vw;
-            margin-bottom: 0;
-        }
-
-    }
-
 
 }
+
+
+
 
 /* ONLY TABLET */
 @media only screen and (min-width: 768px) and (max-width: 991px) {}

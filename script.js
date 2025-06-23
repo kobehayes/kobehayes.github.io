@@ -194,6 +194,6 @@ function generateNavBar() {
 
     mobileMenuToggle();
 
-    generateFooter();
+
 }
 

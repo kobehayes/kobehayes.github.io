@@ -16,16 +16,25 @@
       height: 100%;
       width: 100vw;
       background-image: url('book-imgs/anything-graphic.svg');
-      /* background-size: 100%; */
+      background-size: 100%;
       background-position: 0px 30px;
-      /* background-repeat: repeat; */
+      background-repeat: repeat;
       animation: moveBackground 60s linear infinite;
 
     }
 
+    @media (max-width: 767px) {
+      body {
+        background-size: 200%;
+      }
+    }
+
+
+
+
     @keyframes moveBackground {
       0% {
-        background-position: 0px 30px;
+        background-position: -80px 30px;
       }
 
       100% {
@@ -70,7 +79,7 @@
     </section>
   </section>
 
-  <footer>
+  <!-- <footer>
     <div class="footer-content">
 
       <p>kobehayes1@gmail.com</p>
@@ -78,7 +87,7 @@
 
       <p><a href="https://www.instagram.com/k.be?igsh=MXRud2prZTJ0a3FldQ%3D%3D&utm_source=qr">Instagram</a></p>
     </div>
-  </footer>
+  </footer> -->
 
 
 
